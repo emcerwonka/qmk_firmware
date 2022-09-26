@@ -1,21 +1,36 @@
 #include QMK_KEYBOARD_H
 
+enum layers {
+    MAC_BASE,
+    WIN_BASE,
+    _FN1,
+    _FN2,
+    _FN3
+};
+
+enum custom_keycodes {
+   KC_MISSION_CONTROL = SAFE_RANGE,
+   KC_LAUNCHPAD
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /*
-     * ┌───┬───┬───┬───┐
-     * │ 7 │ 8 │ 9 │ / │
-     * ├───┼───┼───┼───┤
-     * │ 4 │ 5 │ 6 │ * │
-     * ├───┼───┼───┼───┤
-     * │ 1 │ 2 │ 3 │ - │
-     * ├───┼───┼───┼───┤
-     * │ 0 │ . │Ent│ + │
-     * └───┴───┴───┴───┘
-     */
-    [0] = LAYOUT_ortho_4x4(
-        KC_P7,   KC_P8,   KC_P9,   KC_PSLS,
-        KC_P4,   KC_P5,   KC_P6,   KC_PAST,
-        KC_P1,   KC_P2,   KC_P3,   KC_PMNS,
-        KC_P0,   KC_PDOT, KC_PENT, KC_PPLS
-    )
+   [MAC_BASE] = LAYOUT_alice_q8(
+
+   ),
+
+   [WIN_BASE] = LAYOUT_alice_q8(
+
+   ),
+
+   [_FN1] = LAYOUT_alice_q8(
+
+   ),
+
+   [_FN2] = LAYOUT_alice_q8(
+
+   ),
+
+   [_FN3] = LAYOUT_alice_q8(
+
+   )
 };
