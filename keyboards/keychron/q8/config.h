@@ -3,14 +3,20 @@
 
 #pragma once
 
+/* Key matrix size */
 #undef MATRIX_ROWS
 #undef MATRIX_COLS
-/* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION ROW2COL
+
+/* Use 5 dynamic keymap layers */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
+
+/* N-key rollover */
+#define FORCE_NKRO
 
 /* disable print */
 //#define NO_PRINT
